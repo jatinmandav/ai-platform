@@ -8,10 +8,6 @@ Link to Paper: [Unsupervised Representation Learning with Deep Convolutional Gen
 
 Dataset: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
 
-Here are some sample images from the dataset:
-
-<p align="center"> <img src="fashion-mnist-sample.png"/> </p>
-
 
 ### Code
 
