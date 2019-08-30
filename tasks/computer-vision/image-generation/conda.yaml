@@ -1,0 +1,12 @@
+name: image_geneartion_fashion_mnist
+channels:
+  - defaults
+dependencies:
+  - python=3.6
+  - pandas=0.25.0
+  - numpy=1.16.4
+  - matplotlib=3.0.3
+  - argparse=1.1
+  - keras=2.2.5
+  - pip:
+    - mlflow>=1.2.0

@@ -1,0 +1,14 @@
+name: image_geneartion_fashion_mnist
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      img_rows: {type: integer, default: 28}
+      img_cols: {type: integer, default: 28}
+      channels: {type: integer, default: 1}
+      noise_dim: {type: integer, default: 100}
+      epoch: {type: integer, default: 3000}
+      batch: {type: integer, default: 128}
+    command: "python train_gan.py -r {img_rows} -c {img_cols} -ch {channels} -n {noise_dim} -e {epoch} -b {batch}"
