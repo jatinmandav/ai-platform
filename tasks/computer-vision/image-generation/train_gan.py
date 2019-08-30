@@ -25,7 +25,6 @@ args = parser.parse_args()
 
 mlflow.keras.autolog()
 
-
 params = {'img_rows': args.img_rows, 'img_cols': args.img_cols, 'channels': args.channels,
           'noise_dim': args.noise, 'epoch': args.epoch, 'plt_frq': 20, 'batch_size': args.batch}
 
@@ -111,6 +110,8 @@ with mlflow.start_run() as run:
             print('Generator Loss: {}, Discriminator Loss: {}'.format(g_loss, d_loss[0]))
             #plot_loss(losses)
             #plot_gen(epoch=epoch)
+
+plot_gen(epoch=None)
 
 training_info = client.get_run(run.info.run_id)
 mlflow.keras.log_model(dcgan_model.generator, "model", custom_objects=config)
